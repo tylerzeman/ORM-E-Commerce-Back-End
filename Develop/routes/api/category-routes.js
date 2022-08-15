@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
   Category.findAll({
     include: Product
   })
-    .then((catData) => res.json(catData))
+    .then(catData => res.json(catData))
 });
 
 router.get("/:id", (req, res) => {
@@ -21,7 +21,7 @@ router.get("/:id", (req, res) => {
       include: Product
     },
   })
-  .then((catData) => res.json(catData))
+  .then(catData => res.json(catData))
 });
 
 router.post("/", (req, res) => {
@@ -29,15 +29,29 @@ router.post("/", (req, res) => {
   Category.create({
     catName: req.body.catName
   })
-  .then((catData) => res.json(catData))
+  .then(catData => res.json(catData))
 });
 
 router.put("/:id", (req, res) => {
   // update a category by its `id` value
+  Category.update({
+    catName: req.body.catName
+  },{
+    where: {
+      id: req.params.id
+    }
+  }
+  )
 });
 
 router.delete("/:id", (req, res) => {
   // delete a category by its `id` value
+  Category.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(catData => res.json(catData))
 });
 
 module.exports = router;

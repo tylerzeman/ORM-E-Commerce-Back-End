@@ -8,9 +8,7 @@ router.get("/", (req, res) => {
   // be sure to include its associated Products
   Category.findAll({
     include: Product
-  }).then(catData => {
-    res.json(catData)
-  });
+  }).then(category_data => res.json(category_data));
 });
 
 router.get("/:id", (req, res) => {
@@ -19,38 +17,30 @@ router.get("/:id", (req, res) => {
   Category.findOne({
     where: {id: req.params.id},
     include: Product
-  }).then(catData => {
-    res.json(catData)
-  });
+  }).then(category_data => res.json(category_data));
 });
 
 router.post("/", (req, res) => {
   // create a new category
   Category.create({
-    catName: req.body.catName
-  }).then(catData => {
-    res.json(catData)
-  });
+    category_name: req.body.category_name
+  }).then(category_data => res.json(category_data));
 });
 
 router.put("/:id", (req, res) => {
   // update a category by its `id` value
   Category.update({
-    catName: req.body.catName
+    category_name: req.body.category_name
   },{
     where: {id: req.params.id}
-  }).then(catData => {
-      res.json(catData)
-    });
+  }).then(category_data => res.json(category_data));
   });
 
 router.delete("/:id", (req, res) => {
   // delete a category by its `id` value
   Category.destroy({
     where: {id: req.params.id}
-  }).then(catData => {
-      res.json(catData)
-    });
+  }).then(category_data => res.json(category_data));
 });
 
 module.exports = router;

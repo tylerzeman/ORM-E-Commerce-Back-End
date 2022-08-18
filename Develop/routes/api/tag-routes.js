@@ -8,41 +8,45 @@ router.get('/', (req, res) => {
   // be sure to include its associated Product data
   Tag.findAll({
     include: Product
-  }).then(tag_data => res.json(tag_data));
+  }).then(tagData => res.json(tagData));
 });
 
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
   Tag.findOne({
-    where: {id: req.params.id}, 
+    where: {
+      id: req.params.id
+    },
     include: Product
-  }).then(data_data => res.json(data_data));
+  }).then(tagInfo => res.json(tagInfo));
 });
 
 router.post('/', (req, res) => {
   // create a new tag
   Tag.create({
     tagName: req.body.tagName
-  }, {
-    where: {id: req.params.id}
-  }).then(tag_data => res.json(tag_data));
+  }).then(tagData => res.json(tagData));
 });
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
   Tag.update({
     tagName: req.body.tagName
-  }, {
-    where: {id: req.params.id}
-  }).then(tag_data => res.json(tag_data));
+    }, {
+      where: {
+        id: req.params.id
+      }
+    }).then(tagData => res.json(tagData));
 });
 
 router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
   Tag.destroy({
-    where: {id: req.params.id}
-  }).then(tag_data => res.json(tag_data));
+    where: {
+      id: req.params.id
+    }
+  }).then(tagData => res.json(tagData));
 });
 
 module.exports = router;

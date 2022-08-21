@@ -7,7 +7,7 @@
 
 -- [Install](#Install)
 
--- [Demo](#Demo Video)
+-- [Demo Video](#Demo Video)
 
 
 ## Description

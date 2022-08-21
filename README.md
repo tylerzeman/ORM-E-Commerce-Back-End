@@ -7,7 +7,7 @@
 
 -- [Install](#Install)
 
--- [Demo Video](#Demo Video)
+-- [Demo](#Demo)
 
 
 ## Description
@@ -22,7 +22,7 @@ dotenv, and express. I included a demo video below to show the process and testi
 The user should run "npm i" inside their terminal and it should install the packages listed in the package.json file.
 
 
-## Demo Video
+## Demo
 
 
 https://user-images.githubusercontent.com/107427546/185770814-592e1d6e-aaac-46e3-8add-e9b4262db0e1.mp4

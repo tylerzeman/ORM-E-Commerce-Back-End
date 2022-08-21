@@ -8,7 +8,8 @@ router.get("/", (req, res) => {
   // be sure to include its associated Product data
   Tag.findAll({
     include: Product,
-  }).then((tagData) => res.json(tagData));
+  })
+  .then((tag_data) => res.json(tag_data));
 });
 
 router.get("/:id", (req, res) => {
@@ -19,28 +20,31 @@ router.get("/:id", (req, res) => {
       id: req.params.id,
     },
     include: Product,
-  }).then((tagInfo) => res.json(tagInfo));
+  })
+  .then((tag_data) => res.json(tag_data));
 });
 
 router.post("/", (req, res) => {
   // create a new tag
   Tag.create({
-    tagName: req.body.tagName,
-  }).then((tagData) => res.json(tagData));
+    tag_name: req.body.tag_name,
+  })
+  .then((tag_data) => res.json(tag_data));
 });
 
 router.put("/:id", (req, res) => {
   // update tag's name by its `id` value
   Tag.update(
     {
-      tagName: req.body.tagName,
+      tag_name: req.body.tag_name,
     },
     {
       where: {
         id: req.params.id,
       },
     }
-  ).then((tagData) => res.json(tagData));
+  )
+  .then((tag_data) => res.json(tag_data));
 });
 
 router.delete("/:id", (req, res) => {
@@ -49,7 +53,8 @@ router.delete("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-  }).then((tagData) => res.json(tagData));
+  })
+  .then((tag_data) => res.json(tag_data));
 });
 
 module.exports = router;

@@ -3,13 +3,13 @@
 
 ## Tables of contents
 
-[User Story](#User-Story)
+--[User Story](#User-Story)
 
-[Description](#Description)
+--[Description](#Description)
 
-[Install](#Install)
+--[Install](#Install)
 
-[Demo](#Demo)
+--[Demo](#Demo)
 
 ## User-Story
 

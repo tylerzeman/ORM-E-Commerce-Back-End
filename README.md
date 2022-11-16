@@ -3,13 +3,15 @@
 
 ## Tables of contents
 
+[User Story](#User-Story)
+
 [Description](#Description)
 
 [Install](#Install)
 
 [Demo](#Demo)
 
-## User Story
+## User-Story
 
 As a manager of a internet retail company I want a back end for my e-commerce website that uses modern era technologies, so that my company can compete with other companies in the same market.
 

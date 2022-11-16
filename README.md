@@ -3,11 +3,11 @@
 
 ## Tables of contents
 
---[Description](#Description)
+[Description](#Description)
 
--- [Install](#Install)
+[Install](#Install)
 
--- [Demo](#Demo)
+[Demo](#Demo)
 
 
 ## Description
